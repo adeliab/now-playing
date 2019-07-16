@@ -4,7 +4,12 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- master
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - NowPlaying.Api.Movie/*
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -13,5 +18,5 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: dotnet build --configuration $(buildConfiguration)
+- script: dotnet build NowPlaying.Api.Movie.csproj --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
