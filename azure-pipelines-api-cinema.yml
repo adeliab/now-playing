@@ -7,7 +7,7 @@ trigger:
   branches:
     include:
       - master
-	  - develop
+      - develop
   paths:
     include:
       - NowPlaying.Api.Cinema/*
