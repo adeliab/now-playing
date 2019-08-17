@@ -24,8 +24,10 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
+    projects: |
+      NowPlaying.Api.Cinema/NowPlaying.Api.Cinema.csproj
     publishWebProjects: true
-    arguments: 'NowPlaying.Api.Cinema/NowPlaying.Api.Cinema.csproj --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: true
 
 # this code takes all the files in $(Build.ArtifactStagingDirectory) and uploads them as an artifact of your build.
