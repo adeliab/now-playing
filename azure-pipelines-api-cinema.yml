@@ -17,13 +17,8 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  majorVersion: 0
-  minorVersion: 1
-  patchVersion: $[counter(format('{0}.{1}', variables['majorVersion'], variables['minorVersion']), 0)]
 
 steps:
-# - script: dotnet build NowPlaying.Api.Cinema/NowPlaying.Api.Cinema.csproj --configuration $(buildConfiguration)
-#   displayName: 'dotnet build $(buildConfiguration)'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
@@ -31,10 +26,6 @@ steps:
     publishWebProjects: false
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: true
-    versioningScheme: byPrereleaseNumber
-    majorVersion: $(majorVersion)
-    minorVersion: $(minorVersion)
-    patchVersion: $(patchVersion)
 
 # this code takes all the files in $(Build.ArtifactStagingDirectory) and uploads them as an artifact of your build.
 - task: PublishBuildArtifacts@1
