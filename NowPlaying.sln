@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NowPlaying.Api.Movie", "NowPlaying.Api.Movie\NowPlaying.Api.Movie.csproj", "{826909F0-F9C3-4A72-9101-C4ACE7F1BE4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NowPlaying.Api.Cinema", "NowPlaying.Api.Cinema\NowPlaying.Api.Cinema.csproj", "{51E916E6-624C-4181-9907-571C54EC6667}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NowPlaying.Api.Cinema", "NowPlaying.Api.Cinema\NowPlaying.Api.Cinema.csproj", "{51E916E6-624C-4181-9907-571C54EC6667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NowPlaying.Web.Public", "NowPlaying.Web.Public\NowPlaying.Web.Public.csproj", "{15019605-5A18-48C6-A269-AE0F7743A278}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NowPlaying.Web.Public", "NowPlaying.Web.Public\NowPlaying.Web.Public.csproj", "{15019605-5A18-48C6-A269-AE0F7743A278}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

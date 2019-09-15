@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 
 namespace NowPlaying.Api.Cinema.Controllers
@@ -7,10 +8,18 @@ namespace NowPlaying.Api.Cinema.Controllers
 	[ApiController]
 	public class ValuesController : ControllerBase
 	{
+		private readonly ILogger<ValuesController> _logger;
+
+		public ValuesController(ILogger<ValuesController> logger)
+		{
+			_logger = logger;
+		}
+
 		// GET api/values
 		[HttpGet]
 		public ActionResult<IEnumerable<string>> Get()
 		{
+			_logger.LogDebug("Get is called");
 			return new string[] { "value1", "value2" };
 		}
 
